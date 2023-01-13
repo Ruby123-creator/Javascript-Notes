@@ -26,7 +26,26 @@ function rollDice(btn_id){
    scores[btn_id].innerText = randomDice
  
 }
+let announce = document.getElementsByClassName("output1")
 
+let winner1 = document.getElementById("winner")
+let arr = document.getElementsByTagName("span")
+winner1.addEventListener("click" ,()=>{declarewinner(arr)});
+
+function declarewinner(arr){
+   let max =0;
+   let win ="";
+   for(let i=0;i<arr.length;i++){
+      let x = arr[i].innerText;
+      console.log(x);
+      if(x>max){
+         max = x;
+         win = playerName[i].value;
+      }
+       
+   }
+      announce[0].innerText = win;
+}
 
 // random => 0<=x<1
 
