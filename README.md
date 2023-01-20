@@ -7,3 +7,5 @@ https://javascript.info/
 https://developer.mozilla.org/en-US/
 
 https://bigfrontend.dev/
+
+https://softauthor.com/category/javascript/
