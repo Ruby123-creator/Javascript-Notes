@@ -1,0 +1,102 @@
+
+
+
+  /* removebtn */
+  body {
+    margin: 10px auto;
+    width: 470px;
+  }
+  
+  h3 {
+    margin: 0;
+    padding-bottom: .3em;
+    padding-right: 20px;
+    font-size: 1.1em;
+  }
+  
+  p {
+    margin: 0;
+    padding: 0 0 .5em;
+  }
+  
+  .pane {
+    background: #edf5e1;
+    padding: 10px 20px 10px;
+    border-top: solid 2px #c4df9b;
+    position: relative;
+  }
+  
+  .remove-button {
+    position: absolute;
+    font-size: 110%;
+    top: 0;
+    color: darkred;
+    right: 10px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousal{
+  max-width: 550px;
+  min-width: 550px;
+}
+
+  .arrow {
+    padding: 0;
+    background: #ddd;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+  }
+  
+  .arrow:focus {
+    outline: none;
+  }
+  
+  .arrow:hover {
+    background: #ccc;
+    cursor: pointer;
+  }
+  
+  ul {
+    height: 130px;
+    width: 9990px;
+    /* overflow-x: hidden; */
+    /* overflow-wrap: normal; */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+  
+  ul img {
+    width: 130px;
+    height: 130px;
+    display: block; /* removes extra space near images */
+  }
+  
+  ul li {
+    display: inline-block; 
+  }
