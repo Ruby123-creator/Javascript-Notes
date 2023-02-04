@@ -28,6 +28,7 @@
          let submit_button = document.querySelector('button');
             let answer = document.querySelector('.answer');
             let speak = document.querySelector('.speak');
+         let  transferdata = JSON.parse(localStorage.getItem('data'));
 
          submit_button.addEventListener('click', chatGpt)
 
@@ -55,14 +56,21 @@
                     speak.appendChild(btn);
 
                     btn.addEventListener('click', abhishekGpt)
-
+                    btn.addEventListener('click' ,findNameFromToken=(inputbox)=>{})
                  
 
 
                 }
+             
+             else{
+                let p = document.createElement('p');
+                p.innerHTML ="Wrong question";
+                p.style.color = "red";
+                document.appendChild(p);
              }
              
             }
+        }
              
             function abhishekGpt(){
 
@@ -81,7 +89,35 @@
 
             }
 
-
+            
+function findNameFromToken(inputGpt){
+    for(let t of data){
+        if(inputGpt.value==t.token){
+            if(t.chances>0){
+                document.append(document.createElement('br'))
+                t.chances--
+                let name = document.createElement('span')
+                name.innerText = `${t.name}   `
+                name.style.color = 'green'
+                let leftChances = document.createElement('span')
+                leftChances.innerText = t.chances
+                leftChances.style.color = 'green'
+                chatGPTDiv.append(name)
+                chatGPTDiv.append(leftChances)
+            }else{
+                let noChance = document.createElement('p')
+                noChance.innerText = "You have no chances left"
+                noChance.style.color = 'red'
+                document.append(noChance)
+            }
+        }else{
+            let noChance = document.createElement('p')
+            noChance.innerText = "You have entered the wrong token"
+            noChance.style.color = 'red'
+            document.append(noChance)
+        }
+    }
+}
 
 
     </script>

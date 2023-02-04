@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p></p>
+
+
+    <script>
+    
+
+    
+         let p = document.querySelector('p')
+
+         function clock(){
+            let date_time = new Date()
+            let hr = date_time.getHours() 
+            let min = date_time.getMinutes()
+            let sec = date_time.getSeconds()
+            p.innerHTML = `${hr}:${min}:${sec}`
+         }
+         
+
+         setInterval(clock, 1000)
+
+      
+
+   
+
+
+
+
+
+
+        //   console.log(date, typeof date)
+    </script>
+</body>
+</html>

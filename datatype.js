@@ -32,6 +32,8 @@ var b = 20;  //global variables : access from anywhere in the code
     var a = 10;   //local variables : accessible only inside a function
 }
 
+
+// datatypes :String.  Number.  Bigint. Boolean. Undefined. Null. Symbol. Object.
 //Number data type
  //infinity
 console.log(typeof 1 / 0);

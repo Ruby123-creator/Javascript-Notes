@@ -36,10 +36,10 @@
           login_form.addEventListener('submit', loginForm)
           let login_email = document.querySelector('#email');
           let login_password = document.querySelector('#password');
-          let data
+          let data  = JSON.parse(localStorage.getItem('data'));
           function loginForm(e){
             e.preventDefault();
-            data = JSON.parse(localStorage.getItem('data'));
+            
             let email = login_email.value;
             let password = login_password.value;
             let cases = ["Email not found", "Password Incorrect", "Login Successful"]
@@ -48,7 +48,16 @@
                     error.innerHTML = cases[x]
               }
               else{
-                    error.innerHTML = cases[x]   
+                    error.innerHTML = cases[x]
+                    for(let t of data){
+
+                        if(t.email == email){
+                            t.tokencreate = generateToken();
+                            t.chances = 10;
+                        }
+                    } 
+                   
+                    window.location.href = "chatGpt.html";
               }
 
           }

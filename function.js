@@ -1,6 +1,6 @@
 //what is function : it is a block of code to perform a particaulr task as many times whenever it is call
 
-
+//named function
 //function declaration
 function x(){
     console.log("hello world!!");
@@ -15,11 +15,11 @@ x();
 
 
 var from = "Ruby";
-function showMessage(name ,text ="hey"){
+function Message(name ,text ="hey"){
     console.log(name + " says " + text);
 }
 
-showMessage(from);
+Message(from);
 
 
 //Return values from a function
@@ -31,7 +31,7 @@ var result = sum(2,3);
 console.log(result);
 
 
-
+//Anonymous function: function which don't have their name their values are declared as variables
 //function expression
 var showMessage = function(){
     console.log("hiii");
@@ -39,40 +39,6 @@ var showMessage = function(){
 
 console.log(showMessage);
 showMessage();
-
-
-
-//func dec
-function sayHi(){
-    console.log("saying hii");
-}
-console.log(sayHi);
-
-
-//fun expression
-var func = sayHi;
-func();
-sayHi();
-
-
-
-// call function
-// Normal Function:
-function hello(x, fun1){
-    console.log("Hello World",x)
-    fun1()
-    
-}
-
-// hello()
-let a = 10
-hello(a, info)
-
-
-
-function info(){
-    console.log("My name is  Abhishek")
-}
 
 
  
@@ -96,14 +62,11 @@ let sum1 =(a,b)=> {
 console.log(sum1(10,20))
 
 
-// No name function
-// (function (a,b){
-//     console.log(a,b)
-// }(10,20))
 
 
 
 
+//use of spread operator in function
 function sum(a, ...x){
     console.log(a, x)
 }
@@ -120,9 +83,7 @@ sum(1,2,3,4,5,6,7)
 
 
 
-// function sum(a=0,b=1){    // default parameters
-//     console.log(a,b)     
-// }
+
 
 
 function sum(a,b){
@@ -150,17 +111,6 @@ sum(10,20)  // 10,20
 // }
 
 
-// // function expression:
-// let sum1 = function(a,b){
-//     console.log(a+b)
-// }
-
-// sum1(10,20)
-// // arrow functions: 
-// let sum2 = (a,b) => {
-//     console.log(a+b)
-// }
-// sum2(10,20)
 
 
 
@@ -168,32 +118,29 @@ sum(10,20)  // 10,20
 
 
 // IIFE - Immediately Invoked Function Expression
-// (function (a,b){
-//     console.log(a+b)
-// })(10,20)
+/*Invoked function expression runs as soon as the browser encounters it.
+ The benefit of this function is that it runs immediately where it’s located 
+ in the code and produces a direct output. That means 
+it is unaffected by code which appears further down in the script which can be useful.*/
 
 
-// (function(){
-//     console.log("Hello")
-// })()
+let Message5=(function (a,b){
+    console.log(a+b)
+})(10,20)
 
 
-// let x = (function (a,b){
-//     return(a+b)
-// })(10,20)
-
-// console.log(x)
-
-
-// scope, global, local
-
-
-(function (){
-    let favourite_anime = "naruto" 
-    console.log(favourite_anime)
+let f=(function(){
+    console.log("Hello")
 })()
 
-console.log(favourite_anime )
+
+let z = (function (a,b){
+    return(a+b)
+})(10,20)
+
+console.log(z)
+
+
 
 
 
