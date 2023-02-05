@@ -141,6 +141,81 @@ let z = (function (a,b){
 console.log(z)
 
 
+// examples of functions
+/*CLOSURES :if we create a function inside another function, we are creating a closure. Closures are functions that refer to independent (free) variables (variables that are used locally, but defined in an enclosing scope) — These functions remember the environment in which they are created. What makes a closure powerful is that it is capable of reading and manipulating the data of its outer functions.
+
+ Closures are nested function which have access to the outer scope. After the outer function is returned, by keeping a reference to the inner function (the closures) we prevent the outer scope to be destroyed. A closure is an inner function which has access to the outer function scope. If the outer function is called multiple times, every call creates a new closure. Closure’s existence is dependent on their parent function’s existence.  */
+
+
+function sum(a){
+    // a = 10
+    console.log("Sum")
+    function sumAgain(b){
+        // b = 20
+        console.log(a+b)
+    }
+    return sumAgain
+}
+
+let p = sum(10);  
+p(20)   
+// here x is a anonymous function which takes 20 as parameter
+//  here x = function sumAgain(20)
+// x = sumAgain
+
+
+
+
+function makeCounter() {
+    let count = 0;
+    return function() {
+      return count++;        // first return then increment
+    }                    //++count   -- first increment then return
+  }
+  let counter = makeCounter();
+
+//   counter = function() {
+//     return count++; // count++, ++count
+//   }
+
+
+  console.log(counter()); 
+  console.log(counter()); 
+  console.log(counter()); 
+  
+
+  
+
+
+
+
+
+
+
+function makeAdder(x) {
+    return function(y) {
+      return x + y;
+    }
+  }
+  let add5 = makeAdder(5);
+  let add10 = makeAdder(10);
+  console.log(add5(3));   // starts from here  call add5 == function(y) value = 8
+  console.log(add10(3));  // 13
+
+
+let arr = [];
+for (let i = 0; i < 5; i++) {
+  arr.push(function() { return i*i });   // arr = {0,1,4,9,16}
+}
+console.log(arr[1]());  //1
+console.log(arr[3]());  // 9
+
+
+
+
+// a[3] = function() { return 9 }
+// a[3]() // 9
+
 
 
 
