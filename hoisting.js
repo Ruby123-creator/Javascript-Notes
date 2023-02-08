@@ -1,6 +1,5 @@
-// hoisting: the process whereby the interpreter appears to move the declaration of functions,
-// variables or classes to the top of their scope, prior to execution of the code
-
+/* hoisting: the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope, prior to execution of the code
+hoisting is javascripts default behaviour to move all the declarations to top of the scope*/
 console.log(x); //undefine
 
 var x;

@@ -45,6 +45,7 @@ function declarewinner(arr){
        
    }
       announce[0].innerText = win;
+      btns[btn_id].disabled = false;
 }
 
 // random => 0<=x<1

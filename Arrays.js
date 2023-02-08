@@ -7,8 +7,8 @@ const newArray = [...hege , ...stale , ...newl ];
 console.log(newArray);
 //output: ["Cecilie","Lone","Emil","Tobias","Linus","Singh", "Shakya"]
 
-// .concat() method - to concate only two arrays
-const children = hege.concat(stale);
+// .concat() method - to concate only two or more  arrays
+const children = hege.concat(stale).concat(newl);
 console.log(children); 
 //output: ["Cecilie", "Lone","Emil", "Tobias", "Linus"]
 
@@ -49,6 +49,8 @@ Array destructuring  :-
 The regular way is to access an element in the array. first, 
 we iterate the given array and access each of the elements one by one. 
 but when use this array destructuring we do not need to use any of the indexes or loop.
+Destructuring is used to more easily assign values taken directly from an object or an array.
+
 */
 const date = ['11', '02', '1982']
 const [month, , year] = date
@@ -61,7 +63,7 @@ let [ car1, car2 , ...rest ] = simpleArray;
 
 console.log(car1); // Output: 'Volvo'
 console.log(car2); // Output: 'BMW'
-console.log(rest); // Output: ['Ford','Mazda']
+console.log(rest); // Output: ['Ford','Mazda','toyota']
 
 
 const arr2 = ['Pyke', 'Black Sun', 'Kanjiklub', 'Crimson'];

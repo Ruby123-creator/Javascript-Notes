@@ -2,7 +2,7 @@
 // 1. dynamically type : no need to define(specity) the datatype.
 // 2. high-level language: user-friendly language(english -text).
 // 3.programming language: able to perform computational tasks.
-// 4.crippting language:  The scripting language is basically a language where instructions are written for a run time environment. 
+// 4.scrippting language:  The scripting language is basically a language where instructions are written for a run time environment. 
 // They do not require the compilation step and are rather interpreted.
 
 
@@ -89,7 +89,7 @@ console.log(k, typeof k)
 
 
 let o = "123.6rat456"
-let j = parseFloat(o) // 123
+let j = parseFloat(o) // 123.6
 let q = parseInt(o)
 console.log(j ,typeof j);
 console.log(q, typeof q)
@@ -148,7 +148,7 @@ console.log(c, typeof c)   //c= object   type of c - string
 // BigInt:  
 // 2**53 - 1
 let bigint = 2.7976931348623157e+308
-console.log(bigint)    //infinity
+console.log(bigint , typeof bigint)    //infinity
 
 // BigInt: 
 
